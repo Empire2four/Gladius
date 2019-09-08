@@ -1,0 +1,894 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Baystation 12 Changelog</title>
+  <link rel="stylesheet" type="text/css" href="changelog.css">
+  <base target="_blank" />
+  <script type='text/javascript'>
+  
+	function changeText(tagID, newText, linkTagID){
+		var tag = document.getElementById(tagID);
+		tag.innerHTML = newText;
+		var linkTag = document.getElementById(linkTagID);
+		linkTag.removeAttribute("href");
+		linkTag.removeAttribute("onclick");
+	}
+	
+  </script>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+<table align='center' width='650'><tr><td>
+<table align='center' class="top">
+	<tr>
+		<td valign='top'>
+			<div align='center'><font size='3'><b>Baystation 12</b></font></div>
+			<div align='center'><font size='3'><b><i>A Space Station 13 Project</i></b></font></div>
+			
+			<p><div align='center'><font size='3'><a href="http://wiki.baystation12.net/">Wiki</a> | <a href="https://github.com/Baystation12/Baystation12/">Source code</a></font></div></p>
+            <font size='2'>Code licensed under <a href="http://www.gnu.org/licenses/agpl.html">AGPLv3</a>. Content licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.<br><br>
+			<font size='2'><b>Visit our IRC channels:</b> #bs12 and #codershuttle on irc.sorcery.net</font><br>
+			<font size='2'><b>Join our Discord server:</b> <a href='https://discord.gg/DrtRFxs'>-Click Here-</a><br></font>
+			<font size='2'><b>Support Baystation on Patreon:</b> <a href='https://www.patreon.com/bs12'>-Click Here-</a><br></font>
+			</td>
+	</tr>
+</table>
+
+<br><b>Baystation 12 Credit List</b>
+<table align='center' class="top">
+	<tr>
+		<td valign='top'>
+            <font size='2'><b>Developers:</b> afterthought, chinsky, F-Tang Steve, mloc, PsiOmegaDelta, sabiram, xales<br></font>
+			<font size='2'><b>Currently Active GitHub contributor list:</b> <a href='https://github.com/Baystation12/Baystation12/graphs/contributors'>-Click Here-</a><br></font>
+			<p><font size='2'><b>Credits:</b> Abi79, Apple_Master, Arcalane, Aryn, Cael_Aislinn, Ccomp5950, chinsky, CompactNinja, Deus Dactyl, DopeGhoti, Erthilo, Flashkirby, Hawk_v3, Head, Ipsil, Invisty, JoeyJo0, Lexusjjss, Melonstorm, Miniature, mloc, NerdyBoy1104, PsiOmegaDelta, sabiram, Searif, SkyMarshal, Snapshot, Spectre, Strumpetplaya, Sunfall, Tastyfish, Uristqwerty, Xenone, cib, faux, Zuhayr<br></p>
+			<font size='2'><b>Special thanks to:</b> The developers of /tg/station, /vg/station, GoonStation, the original Space Station 13, and BYOND</font>
+			<div align='center'><font size='2' color='red'><b><br>Have a bug to report?</b> Visit our <a href="https://github.com/Baystation12/Baystation12/issues?labels=Bug&state=open">Issue Tracker</a>.<br></font></div>
+		</td>
+	</tr>
+</table>
+
+		<!--
+		
+		TO ADD AN ENTRY, ADD AND MAINTAIN YOUR OWN changelog/USERNAME.yml FILE. 
+		
+		*** DO NOT MODIFY THIS FILE OR YOU WILL CAUSE MERGE CONFLICTS. ***
+		
+		-->
+		<div class="commit sansserif">
+
+			<h2 class="date">06 September 2019</h2>
+			<h3 class="author">BlueNexus updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Default Cyborgs no longer have stunbatons</li>
+			</ul>
+
+			<h2 class="date">04 September 2019</h2>
+			<h3 class="author">CrimsonShrike updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Mapped a basic exosuit to the cargo bay.</li>
+			</ul>
+
+			<h2 class="date">03 September 2019</h2>
+			<h3 class="author">CrimsonShrike updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Adds second robo slot since biomech is now gone and workload is too high.</li>
+			</ul>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Adds a Morpheus Cyberkinetics labcoat to the loadout.</li>
+			</ul>
+			<h3 class="author">Piccione updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Added Crosses buildable out of Material Sheets. Can also be found in Loadout.</li>
+			</ul>
+			<h3 class="author">Rain7x updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Added "Resident" Physician Alt Title</li>
+				<li class="rscdel">Removed "Trauma Surgeon" Alt Title</li>
+			</ul>
+
+			<h2 class="date">02 September 2019</h2>
+			<h3 class="author">babydoll updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Reduced attack frequency and damage for nearly all castes of asteroclast.</li>
+				<li class="tweak">Asteroclast nucleus' values change as they're damaged. They become more aggressive, but more vulnerable to attack, and spend more energy regenerating than trying to expand.</li>
+				<li class="rscadd">Added incense cones.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="imageadd">Adds the 'Trimmed Right Sidecut' hairstyle.</li>
+			</ul>
+
+			<h2 class="date">01 September 2019</h2>
+			<h3 class="author">Hubblenaut updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="imageadd">Adds new sprites for the TEGs, made by spriter who does not want be named.</li>
+			</ul>
+			<h3 class="author">Zenithstar updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Maintenance near the shield bay now has radiation shielding.</li>
+			</ul>
+			<h3 class="author">babydoll updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Replaced all the various depreciated shield rooms.</li>
+				<li class="maptweak">Split the bluespace drive chamber into two areas for air alarm accuracy.</li>
+			</ul>
+
+			<h2 class="date">31 August 2019</h2>
+			<h3 class="author">BRAINOS, Plaguewalker updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Ported new prosthetic types from Aurora; Bishop Rook, ZH Spirit, Xion Econ</li>
+			</ul>
+			<h3 class="author">BlueNexus updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Sauna heaters and reagent sublimators can now be emagged to make them accept any reagent.</li>
+			</ul>
+			<h3 class="author">Bxil updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscdel">The OFD can now only shoot at overmap events.</li>
+			</ul>
+			<h3 class="author">WezYo updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Skrellship crew can now be selected as provocateur</li>
+			</ul>
+
+			<h2 class="date">30 August 2019</h2>
+			<h3 class="author">CrimsonShrike updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Fixes exosuits being able to use all modules at any range.</li>
+			</ul>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscdel">Removes the Biomechanical Engineer as a role.</li>
+				<li class="tweak">Gives the Roboticist trained Anatomy by default.</li>
+			</ul>
+			<h3 class="author">Rain7x updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">The sleepy pen now contains Vecuronium Bromide instead of Chloral Hydrate.</li>
+			</ul>
+			<h3 class="author">WezYo updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Ghosts can no longer interact with pagers</li>
+			</ul>
+			<h3 class="author">ghostsheet updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Fixes toolbelt overlay. Putting tools into toolbelt will now show up the belt icon again.</li>
+			</ul>
+
+			<h2 class="date">27 August 2019</h2>
+			<h3 class="author">Bxil updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">The Bluespace Artillery has been rebranded to Obstruction Field Disperser.</li>
+			</ul>
+			<h3 class="author">Cajoes updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Ascent Cutter has been updated.</li>
+			</ul>
+			<h3 class="author">ghostsheet updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Fixes various bugs for emergency fire shutters construction/deconstruction, such as going invisible, returning incorrect amount of metal and skipping steps.</li>
+				<li class="tweak">Emergency fire shutters will now have a delay for welding them.</li>
+			</ul>
+
+			<h2 class="date">26 August 2019</h2>
+			<h3 class="author">Boznar updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Shield generators have been consolidated to a single shield bay with its own substation. Bridge deck shield has been left in place to account for all 5 shield generators. Shields also have their own SMES units so that configuring each individual shield can be done more precisely.</li>
+				<li class="maptweak">Bluespace drive has been remapped to be prettier. It is no longer considered a maintenance area and wont spawn drones or trash.</li>
+				<li class="maptweak">Deck two saferoom has been removed to make room for these changes.</li>
+			</ul>
+			<h3 class="author">Plaguewalker updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="imageadd">Adds 3 new FBP variants for Morpheus - Blitz, Airborne, and Prime</li>
+			</ul>
+
+			<h2 class="date">24 August 2019</h2>
+			<h3 class="author">Anticept updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Water tanks are now immune to atmospheric temperatures</li>
+				<li class="rscadd">Fire extinguishers can be filled from sinks! When full, they are instead washed.</li>
+				<li class="rscadd">Fancy progress bar when washing in a sink!</li>
+				<li class="bugfix">Slightly refactored sink washing code. if a user interrupts the process, it will not continue processing the item or most item effects.</li>
+			</ul>
+			<h3 class="author">ghostsheet updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Floodlights are now constructable circuit machines.</li>
+				<li class="rscadd">Floodlights can now be upgraded with capacitor components, for increased brightness with a higher power cost.</li>
+				<li class="bugfix">Floodlights also work in areas without APC.</li>
+			</ul>
+
+			<h2 class="date">23 August 2019</h2>
+			<h3 class="author">Boznar updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Adds large vents to both sides of the engine room. These can be opened with a button in the emergency box in the control room.</li>
+				<li class="maptweak">Renamed all of the glass box emergency buttons and added descriptions.</li>
+				<li class="maptweak">Engine hatch bolt control button has been moved to the inside of the engine room next to the hatches.</li>
+			</ul>
+			<h3 class="author">Cajoes updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Commissary now spawns with a vending machine.</li>
+				<li class="tweak">tweaked the sauna thermostat and auxiliary space heater to bring the room up to a comfortable 348.15 kelvin. Which I am reasonably sure the human body can tolerate. For a while.</li>
+			</ul>
+			<h3 class="author">MistakeNot4892 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Enhanced an opossum.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Adherents now properly get their speed bonus again.</li>
+			</ul>
+
+			<h2 class="date">22 August 2019</h2>
+			<h3 class="author">ghostsheet updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">SMES chance to discharge is now skill based, with 50% increase at unskilled and 50% decrease at master.</li>
+			</ul>
+			<h3 class="author">sunofang updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Revamps the yacht into a prettier state.</li>
+			</ul>
+
+			<h2 class="date">20 August 2019</h2>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Mules will no longer spawn with psi-dampener implants.</li>
+			</ul>
+			<h3 class="author">MistakeNot4892 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Added a new human subspecies, the Mule. Mules can be merchants or submap roles.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Space vine event will now never have invisible vines.</li>
+				<li class="bugfix">Surveyor drone now has skills.</li>
+			</ul>
+
+			<h2 class="date">19 August 2019</h2>
+			<h3 class="author">Chinsky updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Can no longer sample plants with machet. Need an edged weapon of size 'small' or 'tiny'. Normal size and above will chop as usual now. Harm intent also forces chopping instead of sampling.</li>
+				<li class="tweak">Can alt-click vines when holding normal-sized blade (machet) in hand to chop them down. It'll take a short time, faster if you have Trained botany skill. Basically less chat-spamming alternative to just bashing them down.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Ghosts can't interact with space heaters anymore.</li>
+				<li class="bugfix">Stacks of one sheet will now not be deconstructable twice in the deconstructive analyzer.</li>
+			</ul>
+
+			<h2 class="date">17 August 2019</h2>
+			<h3 class="author">ghostsheet updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Torch's fuel pipes have been slightly remapped into safer positions with parts segmented by automatic shutoff valves to prevent leakage. The fuel lines has also been removed completed from the SM heating element (although the HE pipes are still there) and they should now be able to survive an SM delamination. To balance out these safety features, fuel line pressure has been doubled to increase the risk of bodily harm.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Glasses that apply a vision overlay (mesons, tactical goggles, etc.) will no longer function when you are using a sensor console to view the overmap.</li>
+			</ul>
+
+			<h2 class="date">16 August 2019</h2>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">RnD server control consoles will only connect to things on connected Z-levels. So the Torch won't pick up away-site RnD servers only the RnD server control console.</li>
+				<li class="tweak">Robots can open the door control menu again, like AI.</li>
+				<li class="tweak">FBPs don't get affected by their species slowdown stat, positive or negative.</li>
+				<li class="tweak">Robotic eyes ignore your species flash modifier.</li>
+				<li class="tweak">Robotic eyes don't get species darkvision bonuses (e.g. from Space-Adapted Humans)</li>
+			</ul>
+
+			<h2 class="date">15 August 2019</h2>
+			<h3 class="author">Cajoes updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Improved kitchen utensil visibility on grey surfaces.</li>
+			</ul>
+			<h3 class="author">babydoll updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">The drake megafauna can now spawn on volcanic exoplanets.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">As the Torch now starts at random coordinates, the Torch round-start sensor scan will list these coordinates so it is clear where the bearings point from, incase you forget / join the round late.</li>
+			</ul>
+
+			<h2 class="date">14 August 2019</h2>
+			<h3 class="author">MistakeNot4892 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Added a new human subspecies, the boosters.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Illegal Tech is renamed to Esoteric Tech. Producing items with this tech & having esoteric tech levels is not illegal, however possession of those items may be if they appear on the contraband list.</li>
+				<li class="bugfix">Petrov RnD console will start the round able to access the Core RnD server data and sync with the rest of the Torch.</li>
+				<li class="bugfix">Elevator will no longer get stuck when you give it multiple move orders via the elevator panel or the buttons on each floor. It will wait for nine seconds on each floor and then move to the next one in the list.</li>
+				<li class="rscadd">Surveyor Flying Robots now have an emag item, an energy machete.</li>
+			</ul>
+
+			<h2 class="date">13 August 2019</h2>
+			<h3 class="author">Terror4000rus updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">You can take a pill from pillbottle by using it.</li>
+			</ul>
+			<h3 class="author">YodaDoge updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">reduced shield power usage</li>
+			</ul>
+			<h3 class="author">ghostsheet updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Due to the space related mortality rate of our recent expedition, the EXO has increased funding to restock EVA equipment. There are now 5 jetpacks and 3 cooling units in EVA on deck 3.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Resetting a tech you have no levels in at the RnD Server will no longer give you 1 in that tech.</li>
+				<li class="rscdel">Removes Arcane Tech, as it did nothing.</li>
+				<li class="rscadd">Worn RIG suits will now be charged if you walk into a cyborg recharger. If you have an internal cell (FBP/IPC) then that will charge first.</li>
+				<li class="bugfix">Airlock access buttons will now work even if the area they are in has no power.</li>
+				<li class="rscadd">Traitor Robots will get a verb 'Reset Identity Codes' that will remove their external camera connection, robot console connection and lawsync status.</li>
+				<li class="bugfix">Fire axes can now attack unpowered airlocks on harm intent, regardless of the damage level of the door.</li>
+				<li class="tweak">It now takes several hits to get through an undamaged door with a fire axe.</li>
+			</ul>
+
+			<h2 class="date">12 August 2019</h2>
+			<h3 class="author">Boznar updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Adds shutters to the exterior windows of hydroponics, aft bubble, and lounge.</li>
+			</ul>
+			<h3 class="author">Chinsky updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Medical Technicians can no longer have Anatomy skill at Experienced or higher.</li>
+				<li class="tweak">Surgery skill reqs and penalties got beefed up.</li>
+				<li class="tweak">Most surgery step require both Trained Anatomy AND Expert Medicine.</li>
+				<li class="tweak">Delicate' surgery steps (basically inside organ stuff) require both Expert Anatomy AND Expert Medicine.</li>
+				<li class="tweak">Penalties to success chance for missing skills were jacked up mercilessly. Unless you're missing 2 or less skill levels you're not going to succeed, sorry bud.</li>
+				<li class="tweak">Physicians now start with Expert Medicine, free skillpoint pool lowered by its cost.</li>
+				<li class="tweak">Robotic steps require Trained Complex Devices. If there's meat bodyparts involved (e.g. installing into one), need both Trained Complex Devices and Trained Anatomy</li>
+				<li class="tweak">Slime surgery steps require Trained Science.</li>
+			</ul>
+			<h3 class="author">Piccione updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Heads of Security are now are better screened to ensure loyalty to the SCG</li>
+			</ul>
+			<h3 class="author">ghostsheet updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Butterfly knife damage is now slightly lowered. Still pretty deadly.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Airlock bolt buttons (e.g. SMES room and engine hatch doors) will now work.</li>
+			</ul>
+
+			<h2 class="date">10 August 2019</h2>
+			<h3 class="author">Bxil updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscdel">The asteroid will no longer spawn at the Torch every round.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Relocating limbs will now properly always work when you have high enough medical skill.</li>
+			</ul>
+
+			<h2 class="date">08 August 2019</h2>
+			<h3 class="author">Cajoes updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Reworked the abandoned shooting range space into additional lavatory facilities and a sauna.</li>
+				<li class="rscadd">Adds a wooden bucket</li>
+			</ul>
+
+			<h2 class="date">07 August 2019</h2>
+			<h3 class="author">BlueNexus updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">All non-total radiation resistance values for suits etc have been halved.</li>
+				<li class="tweak">The Supermatter, nuclear reactor, R-UST, PACMANs and other radiation sources which were too weak to be relevant have been buffed.</li>
+				<li class="tweak">Radiation sources that were deemed to be too strong have been nerfed, such as garbage planets.</li>
+				<li class="tweak">Grilles have had most of their radiation resistance removed.</li>
+				<li class="tweak">Low walls and windows have had their rad resistance halved, so they add up to a full 100% instead of 200%.</li>
+			</ul>
+			<h3 class="author">MistakeNot4892 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Added a more involved butchery system.</li>
+				<li class="rscdel">Removed stowaway.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Double sets of windoors now have only the interior windoor at department reception desks.</li>
+				<li class="bugfix">Low wall frames deconstruct into 3 steel sheets, which is the amount required to build them.</li>
+				<li class="maptweak">Robotics central windows are now not tintable, surgery area still is.</li>
+				<li class="tweak">Autoinjectors now have a timer for use on other people, instant for yourself OR on incapacitated people with any skill level. They take a third the time compared to a syringe.</li>
+			</ul>
+
+			<h2 class="date">05 August 2019</h2>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Resisting will auto-cancel resting.</li>
+			</ul>
+
+			<h2 class="date">04 August 2019</h2>
+			<h3 class="author">Bxil updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Inflatables now have 1 second delay.</li>
+			</ul>
+			<h3 class="author">Chinsky updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Adds 'Codex' verb that shows user the 'frontpage' of codex, with links to search / index / categories.</li>
+			</ul>
+			<h3 class="author">Eonoc updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Adds a Vox RIG. Same statline as the Industrial RIG, but with full temperature and radiation resistance. Vox had no way to scavenge radioactive or volcanic planets up until now.</li>
+				<li class="rscadd">Adds flux cannon. Essentially a Vox AEG, but with the lasers doing brute damage, and shock mode replaced by a mode that scatters low damage pellets in a burst.</li>
+				<li class="rscadd">Adds sonic cannon. A vox stun rifle, with a mode that uses up all the gun's charge to push, deafen, and dizzy an opponent. Ear protection such as helmets and earmuffs will negate the deafening, and reduce the dizziness.</li>
+				<li class="rscadd">Added the associated projectile types for both above, obviously.</li>
+				<li class="rscadd">Added two new firing sounds, spike.ogg and eLuger.ogg</li>
+				<li class="tweak">Changes spike launcher firing sound to spike.ogg</li>
+				<li class="tweak">Stealth buff to Armalis to make their large size reflected more mechanically.</li>
+				<li class="tweak">Changes the Vox species check on Vox guns to make the guns hiss and jump out of your hands.</li>
+			</ul>
+			<h3 class="author">WezYo updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">CSO now has maint access</li>
+				<li class="rscdel">Removed the discard verb from playing cards</li>
+				<li class="rscadd">Added the ability to pick a card by clicking it with an open hand</li>
+			</ul>
+			<h3 class="author">comma updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Blunt yet sufficiently strong weapons can now pop inflatables</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Yeosa unathi have correct job restrictions now.</li>
+			</ul>
+
+			<h2 class="date">03 August 2019</h2>
+			<h3 class="author">Boznar updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Nacelles now have air alarms, fire alarms, and fire doors.</li>
+			</ul>
+			<h3 class="author">Nirnael updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Fixes bug in using a new apc frame on a broken apc to repair it.</li>
+			</ul>
+			<h3 class="author">Rain7x updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Tweaks the event announcement messages to be more tone-neutral & standardizes the announcement header</li>
+			</ul>
+			<h3 class="author">WezYo updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Attaching a photo to a newscaster story will no longer remove it from your hand</li>
+			</ul>
+			<h3 class="author">afterthought2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">The shield generator has been reworked. It is now much more expensive to keep the shields on continuously, and for large shields it's likely not viable.</li>
+				<li class="rscadd">The shield generator now has an idle and active state (as well as the off state). In the idle state, it consumes limited power and does not generate a shield. In the active state, it consumes a lot of power and produces a shield.</li>
+				<li class="rscadd">If an idle generator is toggled on, it takes a short amount of time to spin up to active state. If an active generator is toggled to idle, it will switch to that state instantly.</li>
+				<li class="rscadd">There are several levels of idle power usage that can be selected. Higher power usage decreases the spin-up time proportionately.</li>
+				<li class="rscadd">The shield generator takes time to adjust the radius of the shield. The radius will not be adjusted while the shield is active.</li>
+				<li class="tweak">The shield generator's power storage has been vastly expanded.</li>
+				<li class="tweak">The shield generator's field integrity is now tracked separately from the power storage (it's determined by the amount of power stored, up to a threshold).</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Radiation collectors are now capped at 500kW output at 250Bq radiation. They are more efficient at lower radiation levels.</li>
+				<li class="tweak">Radiation collectors will have variable fuel usage, capping out at 250Bq radiation. Fuel usage increased significantly (1-10x depending on radiation levels)</li>
+				<li class="tweak">Radiation collectors will now break from high radiation levels (500Bq) as well as temperature, they will display a warning and play a warning sound.</li>
+				<li class="maptweak">Stowaways can no longer spawn in the incinerator room, which they cannot leave.</li>
+				<li class="bugfix">Fixes inconsistent icon names for female jumpsuit icons. Should work for rolling down / roll sleeves for all jumpsuits/suits now.</li>
+			</ul>
+
+			<h2 class="date">02 August 2019</h2>
+			<h3 class="author">CrimsonShrike updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Added 2 new exosuit propulsions. The quadlegs and the armored tracks.</li>
+				<li class="tweak">Speed tweaks to exosuit legs.</li>
+			</ul>
+			<h3 class="author">Noble Caos updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Allows nascents gestalts to add human-sized mobs when the gestalt contains 20 nymphs.</li>
+			</ul>
+			<h3 class="author">babydoll updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Renamed all tasers in their various forms to electrolaser.</li>
+			</ul>
+			<h3 class="author">zaredman updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Re-adds the Torch variant of the Sec-Tech and actually stocks it with more gear.</li>
+			</ul>
+
+			<h2 class="date">01 August 2019</h2>
+			<h3 class="author">BlueNexus updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscdel">The Security cyborg module has been disabled.</li>
+			</ul>
+			<h3 class="author">afterthought2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Chloral hydrate is once again effective; this applies to sleepy pens.</li>
+			</ul>
+			<h3 class="author">babydoll updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Added the antlion and antlion queen to desert exoplanets.</li>
+				<li class="tweak">Moved the giant crab megafauna to snow exoplanets.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Nacelle control switches in the engineering monitoring room will now work.</li>
+				<li class="bugfix">Fixes issue that prevented organ transplants.</li>
+			</ul>
+
+			<h2 class="date">31 July 2019</h2>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Adds colorable bracelets to the loadout.</li>
+			</ul>
+			<h3 class="author">WezYo updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Requesting pAI personalities works now</li>
+			</ul>
+
+			<h2 class="date">30 July 2019</h2>
+			<h3 class="author">Rain7x updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Medical & Engineering trainees can now select their department specific webbing & drop pouches; and medical trainees now have access to their department armbands.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Senior Engineer now gets access_network, allowing them to use the NTNet Diagnostics and Monitoring program and various command line tools.</li>
+				<li class="tweak">Access hacking antag program can now hack access_network, if the antag has master level IT skill.</li>
+				<li class="tweak">The NTNet Quantum Relay in telecomms will now keep physical logs of network activity, wiping the NTNet Diagnostics Program logs will not affect these, and they cannot be accessed remotely. The portable drive can be removed via a UI eject button and the data imported from it into a modular computer.</li>
+				<li class="maptweak">Telecomms storage room now has a couple of spare portable hard disks.</li>
+			</ul>
+
+			<h2 class="date">29 July 2019</h2>
+			<h3 class="author">Chinsky updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Added a medical health checkup to Reports program for all you thirsty doctors</li>
+			</ul>
+			<h3 class="author">CrimsonShrike updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Exosuits can now be repaired without using a recharger using either a welding tool or cable coil depending on damage.</li>
+			</ul>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Adds Hephaestus Titan, a bulky full-body prosthetic, and Morpheus Atlantis, a skeletal head prosthetic, to chargen.</li>
+			</ul>
+			<h3 class="author">Eonoc updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Fixes the Vox spacesuit light overlay from a grey hat, to just nothingness, since I didn't feel up to making new sprites for it, and most of the suits have glowy-looking bits anyway.</li>
+			</ul>
+			<h3 class="author">Rain7x updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Makes the "boot selection" in loadout available to civilians only.</li>
+			</ul>
+			<h3 class="author">Spookerton updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Prosthetic limbs previously named Grayson are now named Shellguard.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Unathi brains will now not accept being MMI'd.</li>
+				<li class="tweak">Unathi may no longer have prosthetic internal organs attached.</li>
+				<li class="tweak">Unathi may not start the round as FBPs.</li>
+				<li class="tweak">Unathi may no longer select assisted or synthetic internal organs on round-start.</li>
+				<li class="maptweak">Vox ship burn chamber now operates properly (fixes incorrect injector settings)</li>
+				<li class="maptweak">Vox ship burn chamber can no longer cause the ship to self-destruct due to temperature melting the windows, since they have been replaced with walls that handle up to 12,000K.</li>
+				<li class="maptweak">Adds a temperature/gas sensor to the burn chamber.</li>
+				<li class="maptweak">Vox ship ignition switch now isn't hidden under a light.</li>
+			</ul>
+
+			<h2 class="date">27 July 2019</h2>
+			<h3 class="author">zaredman updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">The larger portion of the Security Armory is now Equipment Storage. Security Staff now have access to this room.</li>
+			</ul>
+
+			<h2 class="date">25 July 2019</h2>
+			<h3 class="author">WezYo updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Aiming point blank at someone will actually aim at them now</li>
+			</ul>
+			<h3 class="author">YodaDoge updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Order Ranks of Jobs ascending so the lowest rank is selected by default</li>
+			</ul>
+			<h3 class="author">afterthought2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">An overmap-capable shuttle can now catch/grapple another overmap-capable shuttle currently moving on the overmap. You do this by moving to an appropriate landmark on the shuttle console.</li>
+				<li class="rscadd">If a shuttle is grappling another shuttle, it cannot move on the overmap; it will be moved by the other shuttle.</li>
+				<li class="rscadd">If a shuttle is being grappled by another shuttle, it cannot make shuttle jumps until the grappler has left.</li>
+				<li class="tweak">Ships within ships count towards vessel mass now, meaning you'll accelerate slower with them landed/attached.</li>
+				<li class="tweak">All greentext for antag objectives and game modes has been removed.</li>
+			</ul>
+			<h3 class="author">babydoll updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">All hivebots now have increased health.</li>
+				<li class="tweak">Increased hivebot megafauna 'hivemind' damage output.</li>
+				<li class="tweak">Reduced hivemind vulnerability duration.</li>
+				<li class="tweak">Reduced hivemind cycle duration.</li>
+			</ul>
+
+			<h2 class="date">24 July 2019</h2>
+			<h3 class="author">Chinsky updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Earmuffs now actually muffle sounds. You'll also not hear spoken things.</li>
+				<li class="rscadd">Headphones can actually play music now. Drag onto yourself when worn in ear slot to access menu. They act as earmuffs when music is playing.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">IV Bag construction option name changed from 'plastic bag' to 'plastic IV bag' so it is different from the other 'plastic bag'.</li>
+			</ul>
+
+			<h2 class="date">23 July 2019</h2>
+			<h3 class="author">CrimsonShrike updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Exosuits have been completely refactored. Make sure to check your skills before joining the round.</li>
+				<li class="rscadd">You can now slide ID across a PAI to grant them your access.</li>
+			</ul>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Adds a unique holosign to the Chapel airlock.</li>
+				<li class="rscadd">Adds Jainism and Taoism to the list of human religions.</li>
+				<li class="rscadd">Adds two new chaplain insignia for Jainism and Taoism.</li>
+			</ul>
+			<h3 class="author">Eonoc updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Tweaks Vox codex entry</li>
+				<li class="rscadd">Add Vox shriek audible emote</li>
+			</ul>
+			<h3 class="author">afterthought2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Manually toggling apc settings will no longer raise alarms. Also applies to some mapped APCs.</li>
+			</ul>
+			<h3 class="author">ghostsheet updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Electron reservoir will now shock you upon bumping/getting thrown into it.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Supermatter manual will now show you the wiki page for the Supermatter Engine.</li>
+				<li class="bugfix">Underwear will now no longer be kept on species change, if the species you are changing into cannot wear underwear.</li>
+			</ul>
+
+			<h2 class="date">22 July 2019</h2>
+			<h3 class="author">MikoMyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Adds Vecuronium Bromide, a paralytic drug.</li>
+			</ul>
+			<h3 class="author">afterthought2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Vending machines are now constructable using circuits, and also can be deconstructed. Drag the container they drop to another vendor of the same type to restock it.</li>
+				<li class="tweak">To add things back to vending machines, you now must be on help intent (useful for tool machines).</li>
+			</ul>
+			<h3 class="author">zaredman updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Moved and remodeled Investigations Office, Forensics Lab, and Evidence Storage.</li>
+				<li class="maptweak">Slight adjustments to Brig Chief's office to better accommodate the redesigned processing room.</li>
+			</ul>
+
+			<h2 class="date">21 July 2019</h2>
+			<h3 class="author">SierraKomodo updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Blob resistance values have been tweaked. Cores are now weak to fire and laser, and strong to brute, like green blob.</li>
+				<li class="tweak">Blob shielding mass regeneration rate has been very slightly reduced.</li>
+			</ul>
+
+			<h2 class="date">20 July 2019</h2>
+			<h3 class="author">Boznar updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Adjusted fire locks on deck one and three for better mobility and logic.</li>
+			</ul>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Adds several Chaplain religious insignia to the loadout, representing various faiths.</li>
+				<li class="rscadd">Adds Sikhism to the list of human religions.</li>
+				<li class="rscadd">Adds several preset religious books to the loadout.</li>
+				<li class="rscadd">Adds Shinto to the list of human religions.</li>
+			</ul>
+			<h3 class="author">Funce updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Bad Chefs no longer make runtimes with the juicer.</li>
+			</ul>
+			<h3 class="author">Rain7x updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Increased the chances of the mail event; and of its rare gifts spawning</li>
+			</ul>
+			<h3 class="author">SierraKomodo updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Masks can now properly hide ear and eye slot items if configured to do so.</li>
+			</ul>
+			<h3 class="author">WezYo updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">renaming paper no longer runtimes</li>
+			</ul>
+			<h3 class="author">YodaDoge updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Farmbot can now harvest plants and remove dead plants, again.</li>
+			</ul>
+			<h3 class="author">afterthought2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Adding capacitors to a machine buffs the battery backup's charge rate.</li>
+				<li class="tweak">Borg chargers recharge faster now.</li>
+				<li class="bugfix">Toggling APC power manually with exotic mapped apcs should work properly now.</li>
+			</ul>
+			<h3 class="author">ghostsheet updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Hanger Atmospheric Storage room has been added to the hanger. This replaces the unused refinery slot near the fore of the charon.</li>
+				<li class="bugfix">Restore button pressing sprites to their previous states.</li>
+				<li class="bugfix">Cell charger will now work in Z-level transition, and they now have proper sprite charge bar.</li>
+				<li class="rscadd">Cells now have a red charge state which is below 25% charge.</li>
+				<li class="tweak">Suit cyclers repair function is now default for all suit cyclers.</li>
+				<li class="bugfix">Duct tape space suit repairs now works properly while suits are being worn.</li>
+				<li class="rscadd">Mining drill head now indicate how full they are.</li>
+				<li class="tweak">Mining drill head logic change slightly to be more informative.</li>
+				<li class="tweak">EVA airlock on deck 3 now has all its access set to  ACCESS_EVA. So anyone who can enter the room can use the airlock.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Can no longer adjust your Chameleon Item's appearance while restrained or disabled.</li>
+				<li class="maptweak">Toxins lab now has a button for its blast doors, labels for its pumps, chamber now has a gas sensor, and more lighting.</li>
+				<li class="tweak">Can no longer do surgery through thick clothing, suits, RIGs, etc. You will need to remove the clothing before you can make incisions.</li>
+				<li class="bugfix">Female characters will now be able to use the roll down and roll sleeves verbs without their jumpsuits disappearing.</li>
+			</ul>
+
+			<h2 class="date">18 July 2019</h2>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Adds colorable beanies and rastacaps to the loadout.</li>
+			</ul>
+			<h3 class="author">babydoll updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">The zeq queen megafauna can now spawn on chlorinated exoplanets.</li>
+			</ul>
+
+			<h2 class="date">16 July 2019</h2>
+			<h3 class="author">MikoMyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="imageadd">New MMI icons with damage states by Joeynosegay.</li>
+				<li class="tweak">FBPs no longer get brute/burn mod bonuses from their human subspecies.</li>
+				<li class="rscadd">Prosthetic organ fabricator can now print replacement FBP power cell organs.</li>
+			</ul>
+
+			<h2 class="date">15 July 2019</h2>
+			<h3 class="author">afterthought2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="admin">You can now ban, jobban, and view notes on logged out mobs. This will act on the last ckey to have possessed the mob.</li>
+			</ul>
+			<h3 class="author">babydoll updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Replaced all-in-one grinders in cooking areas with idiot proof juicers. These cannot hurt your hands.</li>
+				<li class="maptweak">Replaced all-in-one grinders in laboratory areas with industrial grinders. These can hurt your hands.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Conveyor Belt and Switch assemblies can be created from the autolathe. Use the switch on the conveyor belt to link before placing, crowbar to remove both.</li>
+			</ul>
+
+			<h2 class="date">14 July 2019</h2>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Makes the machete sheath its own selection under loadout; removes it from the list of holster selections.</li>
+				<li class="rscadd">The Chaplain's bible now has "blessings;" as a Chaplain, use your bible (or holy book) on another character to recite a prayer to them, or use the book in your hand to read a passage to everyone nearby. If you are of the same religion, they will receive a message putting them at ease.</li>
+			</ul>
+			<h3 class="author">sick trigger updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Skrell ship air alarms set to a higher, more appropriate temperature.</li>
+			</ul>
+
+			<h2 class="date">13 July 2019</h2>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Machines will now have a hint if you have forgotten to install a tesla link.</li>
+				<li class="rscadd">Robco vendor will now vend tesla links and keyboards for building machinery.</li>
+			</ul>
+
+			<h2 class="date">12 July 2019</h2>
+			<h3 class="author">Cajoes updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">food in steel cans and support for canned items, added to cargo</li>
+				<li class="rscadd">Added pistachios to snix vendor</li>
+				<li class="rscadd">Added Sol Snacks vending machine. (And ethnic sol foods to go with it) - Vendor by Chinsky</li>
+				<li class="rscadd">Added japenese snacks to the snix machine and changed it to its own vendor with some label tweaks please welcome the painfully ethnic "Yummy Fods" vending machine. Available in cargo</li>
+				<li class="tweak">Snix machine now more slavic in design</li>
+				<li class="rscadd">Added deoderant to lavatory essentials</li>
+				<li class="rscadd">Added chessboard to game vendor</li>
+				<li class="rscadd">Added numerous vendors to the Cargo Supply Form</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Printing from the file manager program now prints visible paper.</li>
+				<li class="tweak">Adds basic medical and trained chemistry skills to the Service Module. Gives the Service Module the full selection of booze and soft drink dispenser drinks. Significantly reduces power requirement of the drink dispenser tool.</li>
+				<li class="bugfix">Autopilot will now accelerate correctly.</li>
+				<li class="tweak">The psiblade can now hit robots instead of trying to cut their wires like a wirecutter.</li>
+			</ul>
+			<h3 class="author">sick trigger updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Added tinted windows and a light switch to the chapel.</li>
+			</ul>
+			<h3 class="author">zaredman updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Fixed some map oversights following the Security interview room addition (like the wall blocking the door to the FT's lab).</li>
+				<li class="maptweak">Added laundry pods to the Medical washroom.</li>
+			</ul>
+
+			<h2 class="date">11 July 2019</h2>
+			<h3 class="author">afterthought2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Shuttle consoles are now buildable. Use a multitool on the circuit while on a shuttle to set the shuttle first! Shuttles are still not buildable; you must do this on an existing shuttle.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">pAIs no longer have to fold up twice to become a card.</li>
+				<li class="bugfix">pAIs with the Universal Translator module can now speak and understand Spacer and Gutter.</li>
+				<li class="bugfix">Mend psychic power now works properly on operant level to fix bleeding.</li>
+			</ul>
+			<h3 class="author">zaredman updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="maptweak">Adds an Interview Room to the Brig. Adjusts nearby rooms to fit.</li>
+			</ul>
+
+			<h2 class="date">10 July 2019</h2>
+			<h3 class="author">afterthought2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Machines now require power components to draw power. These can be printed from the autolathe. The tesla link one is the default one to use.</li>
+				<li class="rscadd">Many machines now require screens and keyboards to be fully interactable. You can print them from the autolathe.</li>
+				<li class="rscadd">To install components, open the panel with a screwdriver (after the machine is built) and click on the machine with the component. To remove components, use the wrench while the panel is open.</li>
+				<li class="tweak">Computer construction has been changed. A screen and keyboard is required now. The order is: make a frame, wrench to anchor the frame, add 5 coils, add the circuit, add all components as prompted, screwdriver to build. To deconstruct, crowbar to remove components, wirecutters to cut the wire, unwrench, and apply welder.</li>
+				<li class="tweak">General machinery follows the same construction steps as computers now.</li>
+				<li class="rscadd">Computers now have panels, like other machines. To deconstruct a computer, use a screwdriver to open the panel and then a crowbar to deconstruct.</li>
+				<li class="tweak">Newly built machines have the panel open.</li>
+				<li class="rscadd">If confused about this, examine the machine while standing next to it to get information about which tools to use on it.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Can now properly construct multi-tile glass airlocks.</li>
+			</ul>
+
+			<h2 class="date">09 July 2019</h2>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">RUST manual now links to the wiki guide (and doesn't teach you to blow up the RUST)</li>
+			</ul>
+
+			<h2 class="date">08 July 2019</h2>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Dog tags can now be added to the commemorative plaque to memorialize members of the Expeditionary Corps.</li>
+			</ul>
+			<h3 class="author">afterthought2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">The emergency supplies crate is cheaper but has no armored vests now.</li>
+			</ul>
+			<h3 class="author">mikomyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="bugfix">Clonexadone and Cryoxadone no longer reduce damage on necrotic organs.</li>
+			</ul>
+
+			<h2 class="date">07 July 2019</h2>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Counselor now gets different psionic faculties by alternate title: Redaction for Counselor and Coercion for Mentalist.</li>
+				<li class="rscadd">Focus has been added as an Operant Coercive ability; grab a target while target the mouth, then use the grab on them on disarm intent to cure the target of various mental ailments. Power scales by rank.</li>
+				<li class="tweak">Spasm is now a Master ability rather than Operant.</li>
+			</ul>
+
+			<h2 class="date">06 July 2019</h2>
+			<h3 class="author">Devildabeast updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Inscriptions can now be carved into material (gold, steel, silver, etc) rings using sharp objects.</li>
+			</ul>
+			<h3 class="author">MikoMyazaki updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">Antagonist implants are now not visible to the bodyscanner, you can find them by opening the implanted bodypart and examining.</li>
+			</ul>
+			<h3 class="author">afterthought2 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="tweak">If a machine is hackable, you'll now only get shown the wires panel; to see the usual interface close the hacking hatch with a screwdriver again.</li>
+			</ul>
+		</div>
+
+<b>GoonStation 13 Development Team</b>
+	<div class = "top">
+	<b>Coders:</b> Stuntwaffle, Showtime, Pantaloons, Nannek, Keelin, Exadv1, hobnob, Justicefries, 0staf, sniperchance, AngriestIBM, BrianOBlivion<br>
+	<b>Spriters:</b> Supernorn, Haruhi, Stuntwaffle, Pantaloons, Rho, SynthOrange, I Said No<br>
+	</div>
+<br>
+<p class="lic"><a name="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="88x31.png" alt="Creative Commons License" /></a><br><i>Except where otherwise noted, Goon Station 13 is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 License</a>.<br>Rights are currently extended to <a href="http://forums.somethingawful.com/">SomethingAwful Goons</a> only.</i></p>
+<p class="lic">Some icons by <a href="http://p.yusukekamiyamane.com/">Yusuke Kamiyamane</a>. All rights reserved. Licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>.</p>
+</td></tr></table>
+</body>
+</html>
