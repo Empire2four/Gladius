@@ -10,9 +10,9 @@ GLOBAL_DATUM_INIT(godcult, /datum/antagonist/godcultist, new)
 	feedback_tag = "godcult_objective"
 	antag_indicator = "hudcultist"
 	faction_verb = /mob/living/proc/dpray
-	welcome_text = "You are under the guidance of a powerful otherwordly being. Spread its will and keep your faith.<br>Use dpray to communicate directly with your master!<br>Ask your master for spells to start building!"
-	victory_text = "The cult wins! It has succeeded in serving its dark masters!"
-	loss_text = "The staff managed to stop the cult!"
+	welcome_text = "Вы находитесь под руководством могущественного потустороннего существа. Распространяй его волю и продолжай веру.<br>Используй dpray чтобы говроить напримую со своим мастером!<br>Спроси у своего мастера заклинания что-бы начать действовать!"
+	victory_text = "Культ победил! Он преуспел в служении его тёмным мастерам!"
+	loss_text = "Персонал остановил культ!"
 	victory_feedback_tag = "win - cult win"
 	loss_feedback_tag = "loss - staff stopped the cult"
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
@@ -107,6 +107,6 @@ GLOBAL_DATUM_INIT(godcult, /datum/antagonist/godcultist, new)
 		return
 
 	//Make em wait a few seconds.
-	src.visible_message("\The [src] bows their head down, muttering something.", "<span class='notice'>You send the message \"[msg]\" to your master.</span>")
+	src.visible_message("\ [src] Опустил свою голову вниз, борча что-то.", "<span class='notice'>Ты отправил сообщение \"[msg]\" своему мастеру.</span>")
 	to_chat(D, "<span class='notice'>\The [src] (<A href='?src=\ref[D];jump=\ref[src];'>J</A>) prays, \"[msg]\"</span>")
 	log_and_message_admins("dprayed, \"[msg]\" to \the [key_name(D)]")
