@@ -33,33 +33,33 @@ GLOBAL_VAR(spawntypes)
 
 #ifdef UNIT_TEST
 /datum/spawnpoint/Del()
-	crash_with("Spawn deleted: [log_info_line(src)]")
+	crash_with("Спавн удален: [log_info_line(src)]")
 	..()
 
 /datum/spawnpoint/Destroy()
-	crash_with("Spawn destroyed: [log_info_line(src)]")
+	crash_with("Спавн уничтожен: [log_info_line(src)]")
 	. = ..()
 #endif
 
 /datum/spawnpoint/arrivals
-	display_name = "Arrivals Shuttle"
-	msg = "has arrived on the station"
+	display_name = "Прибытие в шаттле"
+	msg = "прибыл/ла на станцию"
 
 /datum/spawnpoint/arrivals/New()
 	..()
 	turfs = GLOB.latejoin
 
 /datum/spawnpoint/gateway
-	display_name = "Gateway"
-	msg = "has completed translation from offsite gateway"
+	display_name = "Шлюз"
+	msg = "успешно прошел/шла через шлюз на станцию"
 
 /datum/spawnpoint/gateway/New()
 	..()
 	turfs = GLOB.latejoin_gateway
 
 /datum/spawnpoint/cryo
-	display_name = "Cryogenic Storage"
-	msg = "has completed cryogenic revival"
+	display_name = "Криогенное хранилище"
+	msg = "завершил/ла криогенную разморозку"
 	disallow_job = list("Robot")
 
 /datum/spawnpoint/cryo/New()
@@ -74,12 +74,12 @@ GLOBAL_VAR(spawntypes)
 		if(!C.occupant)
 			C.set_occupant(victim, 1)
 			victim.Sleeping(rand(1,3))
-			to_chat(victim,SPAN_NOTICE("You are slowly waking up from the cryostasis aboard [GLOB.using_map.full_name]. It might take a few seconds."))
+			to_chat(victim,SPAN_NOTICE("Вы медленно пробуждаетесь от криосна на борту [GLOB.using_map.full_name]. Это займет несколько секунд."))
 			return
 
 /datum/spawnpoint/cyborg
-	display_name = "Cyborg Storage"
-	msg = "has been activated from storage"
+	display_name = "Хранилище киборгов"
+	msg = "был/ла активирован/на в хранилище"
 	restrict_job = list("Robot")
 
 /datum/spawnpoint/cyborg/New()
@@ -88,5 +88,5 @@ GLOBAL_VAR(spawntypes)
 
 /datum/spawnpoint/default
 	display_name = DEFAULT_SPAWNPOINT_ID
-	msg = "has arrived on the station"
+	msg = "прибыл/ла на станцию"
 	always_visible = TRUE

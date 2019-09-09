@@ -18,8 +18,8 @@ var/list/client_preference_stats_
 			.[client_pref_description] = scp
 
 /client/verb/toggle_preference_verb(var/client_pref_name in client_preference_stats_for_usr())
-	set name = "Toggle Preference"
-	set desc = "Toggles the selected preference."
+	set name = "Переключить настройки"
+	set desc = "Переключение выбранную настройку."
 	set category = "OOC"
 
 	var/list/client_stats = client_preference_stats_for_usr()
@@ -29,7 +29,7 @@ var/list/client_preference_stats_
 
 /mob/Stat()
 	. = ..()
-	if(!client || !statpanel("Preferences"))
+	if(!client || !statpanel("Preference"))
 		return
 	var/list/preferences = client_preference_stats_for_usr(src)
 	for(var/client_preference_description in preferences)

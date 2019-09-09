@@ -1,4 +1,4 @@
-	////////////
+////////////
 	//SECURITY//
 	////////////
 #define UPLOAD_LIMIT		10485760	//Restricts client uploads to the server to 10MB //Boosted this thing. What's the worst that can happen?
@@ -9,9 +9,7 @@
 	When somebody clicks a link in game, this Topic is called first.
 	It does the stuff in this proc and  then is redirected to the Topic() proc for the src=[0xWhatever]
 	(if specified in the link). ie locate(hsrc).Topic()
-
 	Such links can be spoofed.
-
 	Because of this certain things MUST be considered whenever adding a Topic() for something:
 		- Can it be fed harmful values which could cause runtimes?
 		- Is the Topic call an admin-only thing?
@@ -136,7 +134,7 @@
 
 	if(config.player_limit != 0)
 		if((GLOB.clients.len >= config.player_limit) && !(ckey in admin_datums))
-			alert(src,"This server is currently full and not accepting new connections.","Server Full","OK")
+			alert(src,"Ётот сервер в насто€щее врем€ заполнен и не принимает новые подключени€.","—ервер полон","OK")
 			log_admin("[ckey] tried to join and was turned away due to the server being full (player_limit=[config.player_limit])")
 			qdel(src)
 			return
@@ -149,7 +147,7 @@
 	if(byond_version < DM_VERSION)
 		to_chat(src, "<span class='warning'>You are running an older version of BYOND than the server and may experience issues.</span>")
 		to_chat(src, "<span class='warning'>It is recommended that you update to at least [DM_VERSION] at http://www.byond.com/download/.</span>")
-	to_chat(src, "<span class='warning'>If the title screen is black, resources are still downloading. Please be patient until the title screen appears.</span>")
+	to_chat(src, "<span class='warning'>≈сли титульный экран все еще черный, ресурсы загружаютс€. ѕожалуйста будьте терпеливы пока оно не завершитс€.</span>")
 	GLOB.clients += src
 	GLOB.ckey_directory[ckey] = src
 
@@ -201,7 +199,7 @@
 
 	if(isnum(player_age) && player_age < 7)
 		src.lore_splash()
-		to_chat(src, "<span class = 'notice'>Greetings, and welcome to the server! A link to the beginner's lore page has been opened, please read through it! This window will stop automatically opening once your account here is greater than 7 days old.</span>")
+		to_chat(src, "<span class = 'notice'>ѕриветствую и добро пожаловать на сервер! ќткрыта ссылка на страницу знаний новичка, пожалуйста, прочитайте ее! Ёто окно перестает автоматически открыватьс€, если возраст вашей учетной записи превышает 7 дней.</span>")
 
 	if(!winexists(src, "asset_cache_browser")) // The client is using a custom skin, tell them.
 		to_chat(src, "<span class='warning'>Unable to access asset cache browser, if you are using a custom skin file, please allow DS to download the updated version, if you are not, then make a bug report. This is not a critical issue but can cause issues with resource downloading, as it is impossible to know when extra resources arrived to you.</span>")

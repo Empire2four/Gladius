@@ -19,10 +19,10 @@
 
 /decl/cultural_info/culture/human/martian_surfacer
 	name = CULTURE_HUMAN_MARTIAN
-	description = "You are from the surface of Mars. Raised in one of the many farming communities or one of the great cities such as Olympus. Most of the surfacers \
-	are known as Monsians, the largest cultural group on the planet. Most Surfacers have had a decent upbringing and represent the \
-	average level of comfort expected in Sol space. Most surfacers are like many across the galaxy, though a few harbour rivalries with other Martian cultural \
-	groups or are generally overly proud of their heritage, as is the case with the Gideons, to the point that they constantly refer to it."
+	description = "Вы с поверхности Марса. Росли в одном из многочисленных фермерских сообществ или в одном из великих городов, таких как Олимп. Большинство людей \
+	известны как монсианцы, крупнейшая культурная группа на планете. Большинство Surfacers имеют достойное воспитание и представляют \
+	средний уровень комфорта, ожидаемый в космическом пространстве. Большинство наземных людей, как и многие другие в галактике, хоть и соперничают с другими марсианскими \
+	группами или вообще чрезмерно гордятся своим наследием, как в случае с Гидеонами, до такой степени, что они постоянно ссылаются на это."
 	economic_power = 1
 
 /decl/cultural_info/culture/human/martian_tunneller

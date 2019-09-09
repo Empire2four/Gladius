@@ -60,7 +60,7 @@ datum/preferences
 	var/datum/species/S = all_species[pref.species]
 
 	if(href_list["rename"])
-		var/raw_name = input(user, "¬ыберите им€ и фамилию вашего персонажа, использу€ транслит (abcde):", "»мя персонажа")  as text|null
+		var/raw_name = input(user, "¬ыберите имя и фамилию вашего персонажа, используя транслит (abcde):", "»мя персонажа")  as text|null
 		if (!isnull(raw_name) && CanUseTopic(user))
 
 			var/decl/cultural_info/check = SSculture.get_culture(pref.cultural_info[TAG_CULTURE])
@@ -106,7 +106,7 @@ datum/preferences
 		return TOPIC_REFRESH
 
 	else if(href_list["metadata"])
-		var/new_metadata = sanitize(input(user, "Enter any information you'd like others to see, such as Roleplay-preferences:", "Game Preference" , pref.metadata) as message|null)
+		var/new_metadata = sanitize(input(user, "¬ведите любую информацию, которую вы хотели бы видеть другим, например, Roleplay-предпочтени€:", "Game Preference" , pref.metadata) as message|null)
 		if(new_metadata && CanUseTopic(user))
 			pref.metadata = new_metadata
 			return TOPIC_REFRESH

@@ -66,7 +66,7 @@
 
 	output += "</div>"
 
-	panel = new(src, "Welcome","Welcome, [client.prefs.real_name]", 560, 280, src)
+	panel = new(src, "Welcome","Добро пожаловать, [client.prefs.real_name]", 560, 280, src)
 	panel.set_window_options("can_close=0")
 	panel.set_content(JOINTEXT(output))
 	panel.open()
@@ -83,8 +83,8 @@
 		stat("Added Antagonists:", extra_antags ? extra_antags : "None")
 
 		if(GAME_STATE <= RUNLEVEL_LOBBY)
-			stat("Time To Start:", "[round(SSticker.pregame_timeleft/10)][SSticker.round_progressing ? "" : " (DELAYED)"]")
-			stat("Players: [totalPlayers]", "Players Ready: [totalPlayersReady]")
+			stat("ВремЯ до старта:", "[round(SSticker.pregame_timeleft/10)][SSticker.round_progressing ? "" : " (DELAYED)"]")
+			stat("Игроки: [totalPlayers]", "Готовые игроки: [totalPlayersReady]")
 			totalPlayers = 0
 			totalPlayersReady = 0
 			for(var/mob/new_player/player in GLOB.player_list)
@@ -114,10 +114,10 @@
 
 	if(href_list["observe"])
 		if(GAME_STATE < RUNLEVEL_LOBBY)
-			to_chat(src, "<span class='warning'>Please wait for server initialization to complete...</span>")
+			to_chat(src, "<span class='warning'>Пожалуйста, дождитесь завершения инициализации сервера...</span>")
 			return
 
-		if(!config.respawn_delay || client.holder || alert(src,"Are you sure you wish to observe? You will have to wait [config.respawn_delay] minute\s before being able to respawn!","Player Setup","Yes","No") == "Yes")
+		if(!config.respawn_delay || client.holder || alert(src,"Вы уверены, что хотите наблюдать? Вам придется подождать [config.respawn_delay] минут, прежде чем возродиться!","Настройка игрока","Да","Нет") == "Да")
 			if(!client)	return 1
 			var/mob/observer/ghost/observer = new()
 
@@ -132,7 +132,7 @@
 				to_chat(src, "<span class='notice'>Now teleporting.</span>")
 				observer.forceMove(O.loc)
 			else
-				to_chat(src, "<span class='danger'>Could not locate an observer spawn point. Use the Teleport verb to jump to the map.</span>")
+				to_chat(src, "<span class='danger'>Не удалось найти точку появления наблюдателя. Используйте глагол Teleport, чтобы перейти к карте.</span>")
 			observer.timeofdeath = world.time // Set the time of death so that the respawn timer works correctly.
 
 			if(isnull(client.holder))
@@ -157,7 +157,7 @@
 	if(href_list["late_join"])
 
 		if(GAME_STATE != RUNLEVEL_GAME)
-			to_chat(usr, "<span class='warning'>The round is either not ready, or has already finished...</span>")
+			to_chat(usr, "<span class='warning'>Раунд либо не готов, либо уже закончен...</span>")
 			return
 		LateChoices() //show the latejoin job selection menu
 
@@ -212,7 +212,7 @@
 			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), '[src.ckey]', '[option]')"
 			var/DBQuery/query_insert = dbcon.NewQuery(sql)
 			query_insert.Execute()
-			to_chat(usr, "<b>Thank you for your vote!</b>")
+			to_chat(usr, "<b>Спасибо за ваш голос!</b>")
 			usr << browse(null,"window=privacypoll")
 
 	if(!ready && href_list["preference"])
@@ -285,14 +285,14 @@
 	if(src != usr)
 		return 0
 	if(GAME_STATE != RUNLEVEL_GAME)
-		to_chat(usr, "<span class='warning'>The round is either not ready, or has already finished...</span>")
+		to_chat(usr, "<span class='warning'>Раунд либо не готов, либо уже закончен...</span>")
 		return 0
 	if(!config.enter_allowed)
-		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
+		to_chat(usr, "<span class='notice'>Существует административная блокировка при входе в игру.!</span>")
 		return 0
 
 	if(!job || !job.is_available(client))
-		alert("[job.title] is not available. Please try another.")
+		alert("[job.title] не доступен. Пожалуйста, попробуйте другой.")
 		return 0
 	if(job.is_restricted(client.prefs, src))
 		return
@@ -351,7 +351,7 @@
 		else
 			AnnounceCyborg(character, job, spawnpoint.msg)
 		matchmaker.do_matchmaking()
-	log_and_message_admins("has joined the round as [character.mind.assigned_role].", character)
+	log_and_message_admins("присоединился к раунду как [character.mind.assigned_role].", character)
 
 	if(character.needs_wheelchair())
 		equip_wheelchair(character)
@@ -422,12 +422,12 @@
 			if(LAZYLEN(job_summaries))
 				dat += job_summaries
 			else
-				dat += "No available positions."
+				dat += "Нет доступных позиций."
 	// END SUBMAP JOBS
 
 	dat += "</table></center>"
 	if(LAZYLEN(hidden_reasons))
-		var/list/additional_dat = list("<br><b>Some roles have been hidden from this list for the following reasons:</b><br>")
+		var/list/additional_dat = list("<br><b>Некоторые роли были скрыты из этого списка по следующим причинам:</b><br>")
 		for(var/raisin in hidden_reasons)
 			additional_dat += "[raisin]<br>"
 		additional_dat += "<br>"
@@ -522,11 +522,11 @@
 /mob/new_player/proc/check_species_allowed(datum/species/S, var/show_alert=1)
 	if(!S.is_available_for_join() && !has_admin_rights())
 		if(show_alert)
-			to_chat(src, alert("Your current species, [client.prefs.species], is not available for play."))
+			to_chat(src, alert("Ваша текущая раса, [client.prefs.species], недоступна для игры."))
 		return 0
 	if(!is_alien_whitelisted(src, S))
 		if(show_alert)
-			to_chat(src, alert("You are currently not whitelisted to play [client.prefs.species]."))
+			to_chat(src, alert("В настоящее время вы не вошли в белый список, чтобы играть [client.prefs.species]."))
 		return 0
 	return 1
 
@@ -566,7 +566,7 @@ mob/new_player/MayRespawn()
 	sanitize_and_communicate(/decl/communication_channel/ooc, client, message)
 
 /mob/new_player/verb/next_lobby_track()
-	set name = "Play Different Lobby Track"
+	set name = "Слушать разные треки лобби"
 	set category = "OOC"
 
 	if(get_preference_value(/datum/client_preference/play_lobby_music) == GLOB.PREF_NO)

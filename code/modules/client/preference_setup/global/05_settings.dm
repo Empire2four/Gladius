@@ -106,7 +106,7 @@
 		else
 			return null
 	else
-		log_error("Client is lacking preferences: [log_info_line(src)]")
+		log_error("Клиенту не хватает настроек: [log_info_line(src)]")
 
 /client/proc/set_preference(var/preference, var/set_preference)
 	var/datum/client_preference/cp = get_client_preference(preference)
@@ -144,7 +144,7 @@
 	if(!client)
 		return FALSE
 	if(!client.prefs)
-		log_debug("Client prefs found to be null for mob [src] and client [ckey], this should be investigated.")
+		log_debug("Клиентские настройки для моба признаны нулевыми [src] и клиент [ckey], его следует изучить.")
 		return FALSE
 
 	return client.set_preference(preference, set_preference)
@@ -153,7 +153,7 @@
 	if(!client)
 		return FALSE
 	if(!client.prefs)
-		log_debug("Client prefs found to be null for mob [src] and client [ckey], this should be investigated.")
+		log_debug("Клиентские настройки для моба признаны нулевыми [src] и клиент [ckey], это должно быть изучено.")
 		return FALSE
 
 	return client.cycle_preference(preference)
