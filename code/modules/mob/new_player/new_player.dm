@@ -30,12 +30,12 @@
 	output += "<div align='center'>"
 	output += "<i>[GLOB.using_map.get_map_info()]</i>"
 	output +="<hr>"
-	output += "<a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A> "
+	output += "<a href='byond://?src=\ref[src];show_preferences=1'>Настроить персонажа</A> "
 
 	if(GAME_STATE > RUNLEVEL_LOBBY)
-		output += "<a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A> "
+		output += "<a href='byond://?src=\ref[src];manifest=1'>Манифест экипажа</A> "
 
-	output += "<a href='byond://?src=\ref[src];observe=1'>Observe</A> "
+	output += "<a href='byond://?src=\ref[src];observe=1'>Наблюдать</A> "
 
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
@@ -55,14 +55,14 @@
 			else
 				output += "<a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A> "
 
-	output += "<hr>Current character: <b>[client.prefs.real_name]</b>[client.prefs.job_high ? ", [client.prefs.job_high]" : null]<br>"
+	output += "<hr>Текущий персонаж: <b>[client.prefs.real_name]</b>[client.prefs.job_high ? ", [client.prefs.job_high]" : null]<br>"
 	if(GAME_STATE <= RUNLEVEL_LOBBY)
 		if(ready)
-			output += "<a class='linkOn' href='byond://?src=\ref[src];ready=0'>Un-Ready</a>"
+			output += "<a class='linkOn' href='byond://?src=\ref[src];ready=0'>Готов</a>"
 		else
-			output += "<a href='byond://?src=\ref[src];ready=1'>Ready Up</a>"
+			output += "<a href='byond://?src=\ref[src];ready=1'>Не готов</a>"
 	else
-		output += "<a href='byond://?src=\ref[src];late_join=1'>Join Game!</A>"
+		output += "<a href='byond://?src=\ref[src];late_join=1'>Присоединиться!</A>"
 
 	output += "</div>"
 
@@ -370,16 +370,16 @@
 	var/name = client.prefs.be_random_name ? "friend" : client.prefs.real_name
 
 	var/list/header = list("<html><body><center>")
-	header += "<b>Welcome, [name].<br></b>"
-	header += "Round Duration: [roundduration2text()]<br>"
+	header += "<b>Добро пожаловать, [name].<br></b>"
+	header += "Длительность раунда: [roundduration2text()]<br>"
 
 	if(evacuation_controller.has_evacuated())
-		header += "<font color='red'><b>The [station_name()] has been evacuated.</b></font><br>"
+		header += "<font color='red'><b>[station_name()] был эвакуирован.</b></font><br>"
 	else if(evacuation_controller.is_evacuating())
 		if(evacuation_controller.emergency_evacuation) // Emergency shuttle is past the point of no recall
-			header += "<font color='red'>The [station_name()] is currently undergoing evacuation procedures.</font><br>"
+			header += "<font color='red'>[station_name()] в настоящее время проходит процедуру эвакуации.</font><br>"
 		else                                           // Crew transfer initiated
-			header += "<font color='red'>The [station_name()] is currently undergoing crew transfer procedures.</font><br>"
+			header += "<font color='red'>[station_name()] в настоящее время проходит процедуру смены экипажа.</font><br>"
 
 	var/list/dat = list()
 	dat += "Choose from the following open/valid positions:<br>"
