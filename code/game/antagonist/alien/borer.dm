@@ -2,18 +2,18 @@ GLOBAL_DATUM_INIT(borers, /datum/antagonist/borer, new)
 
 /datum/antagonist/borer
 	id = MODE_BORER
-	role_text = "Cortical Borer"
-	role_text_plural = "Cortical Borers"
+	role_text = "Мозговой паразит"
+	role_text_plural = "Мозговые паразиты"
 	flags = ANTAG_OVERRIDE_MOB | ANTAG_RANDSPAWN | ANTAG_OVERRIDE_JOB
 	
 	mob_path = /mob/living/simple_animal/borer
-	welcome_text = "Use your Infest power to crawl into the ear of a host and fuse with their brain. You can only take control temporarily, and at risk of hurting your host, so be clever and careful; your host is encouraged to help you however they can. Talk to your fellow borers with :x."
+	welcome_text = "Используйте свою силу заражение, чтобы проникнуть в ухо хозяина и слиться с его мозгом. Вы можете взять контроль над собой только временно и рисковать навредить своему хозяину, поэтому будьте умны и осторожны; Ваш хост приглашен помочь вам, как они могут. Поговорите со своими сверстниками  :x."
 	antag_indicator = "hudborer"
 	antaghud_indicator = "hudborer"
 
-	faction_role_text = "Borer Thrall"
+	faction_role_text = "Раб паразита"
 	faction_descriptor = "Unity"
-	faction_welcome = "You are now a thrall to a cortical borer. Please listen to what they have to say; they're in your head."
+	faction_welcome = "Теперь ты раб паразита. Пожалуйста, слушай, что они говорят; они в твоей голове."
 	faction = "borer"
 	faction_indicator = "hudalien"
 
