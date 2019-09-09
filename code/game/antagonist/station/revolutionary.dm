@@ -2,13 +2,13 @@ GLOBAL_DATUM_INIT(revs, /datum/antagonist/revolutionary, new)
 
 /datum/antagonist/revolutionary
 	id = MODE_REVOLUTIONARY
-	role_text = "Head Revolutionary"
-	role_text_plural = "Revolutionaries"
+	role_text = "Глава революции"
+	role_text_plural = "Революционеры"
 	feedback_tag = "rev_objective"
 	antag_indicator = "hud_rev_head"
-	welcome_text = "Down with the capitalists! Down with the Bourgeoise!"
-	victory_text = "The heads of staff were relieved of their posts! The revolutionaries win!"
-	loss_text = "The heads of staff managed to stop the revolution!"
+	welcome_text = "Смерть капиталистам! Смерть главам!"
+	victory_text = "Главы персонала свергнуты! Революционеры победили!"
+	loss_text = "Главы персонала остановили революцию"
 	victory_feedback_tag = "win - heads killed"
 	loss_feedback_tag = "loss - rev heads killed"
 	flags = ANTAG_SUSPICIOUS | ANTAG_VOTABLE
@@ -21,10 +21,10 @@ GLOBAL_DATUM_INIT(revs, /datum/antagonist/revolutionary, new)
 	initial_spawn_target = 4
 
 	//Inround revs.
-	faction_role_text = "Revolutionary"
-	faction_descriptor = "Revolution"
+	faction_role_text = "Революционер"
+	faction_descriptor = "Революция"
 	faction_verb = /mob/living/proc/convert_to_rev
-	faction_welcome = "Help the cause overturn the ruling class. Do not harm your fellow freedom fighters."
+	faction_welcome = "Свергни тех кто управляет, стараясь не навредить рабочему классу"
 	faction_indicator = "hud_rev"
 	faction_invisible = 1
 	faction = "revolutionary"
@@ -43,5 +43,5 @@ GLOBAL_DATUM_INIT(revs, /datum/antagonist/revolutionary, new)
 			continue
 		var/datum/objective/rev/rev_obj = new
 		rev_obj.target = player.mind
-		rev_obj.explanation_text = "Assassinate, capture or convert [player.real_name], the [player.mind.assigned_role]."
+		rev_obj.explanation_text = "Убить или похитить [player.real_name], [player.mind.assigned_role]."
 		global_objectives += rev_obj
