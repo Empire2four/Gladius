@@ -2,11 +2,11 @@ GLOBAL_DATUM_INIT(loyalists, /datum/antagonist/loyalists, new)
 
 /datum/antagonist/loyalists
 	id = MODE_LOYALIST
-	role_text = "Head Loyalist"
-	role_text_plural = "Loyalists"
+	role_text = "Глава лоялистов"
+	role_text_plural = "Лоялист"
 	feedback_tag = "loyalist_objective"
 	antag_indicator = "hud_loyal_head"
-	victory_text = "The heads of staff remained at their posts! The loyalists win!"
+	victory_text = "Главы персонала остались на своих постах! Лоялисты победили!"
 	loss_text = "The heads of staff did not stop the revolution!"
 	victory_feedback_tag = "win - rev heads killed"
 	loss_feedback_tag = "loss - heads killed"
@@ -31,8 +31,8 @@ GLOBAL_DATUM_INIT(loyalists, /datum/antagonist/loyalists, new)
 
 /datum/antagonist/loyalists/Initialize()
 	..()
-	welcome_text = "You belong to the [GLOB.using_map.company_name], body and soul. Preserve its interests against the conspirators amongst the crew."
-	faction_welcome = "Preserve [GLOB.using_map.company_short]'s interests against the traitorous recidivists amongst the crew. Protect the heads of staff with your life."
+	welcome_text = "Ваша тела и душа принадлежит [GLOB.using_map.company_name]. Представляй интересы компании против заговорщиков среди команды."
+	faction_welcome = "Оберегай интересы [GLOB.using_map.company_short] против изменнических рецидивистов среди команды. Защитите глав сотрудников ценой своей жизньи."
 	faction_descriptor = "[GLOB.using_map.company_name]"
 
 /datum/antagonist/loyalists/create_global_objectives()
@@ -44,5 +44,5 @@ GLOBAL_DATUM_INIT(loyalists, /datum/antagonist/loyalists, new)
 			continue
 		var/datum/objective/protect/loyal_obj = new
 		loyal_obj.target = player.mind
-		loyal_obj.explanation_text = "Protect [player.real_name], the [player.mind.assigned_role]."
+		loyal_obj.explanation_text = "Защищай [player.real_name],  [player.mind.assigned_role]."
 		global_objectives += loyal_obj
