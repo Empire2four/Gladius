@@ -22,22 +22,22 @@
 
 /datum/category_item/player_setup_item/relations/content(mob/user)
 	.=list()
-	. += "Characters with enabled relations are paired up randomly after spawn. You can terminate relations when you first open relations info window, but after that it's final."
+	. += "Персонажи с активированными знакомыми распределяются в случайном порядке после появления. Вы можете разорвать отношения, когда впервые открываете информационное окно отношений, но после этого оно становится окончательным."
 	. += "<hr>"
-	. += "<br><b>What do they know about you?</b> This is the general info that all kinds of your connections would know. <a href='?src=\ref[src];relation_info=["general"]'>Edit</a>"
-	. += "<br><i>[pref.relations_info["general"] ? pref.relations_info["general"] : "Nothing specific."]</i>"
+	. += "<br><b>Что они знают о вас?</b> Это общая информация которую будут знать ваши знакомые. <a href='?src=\ref[src];relation_info=["general"]'>Изменить</a>"
+	. += "<br><i>[pref.relations_info["general"] ? pref.relations_info["general"] : "Ничего."]</i>"
 	. += "<hr>"
 	for(var/T in subtypesof(/datum/relation))
 		var/datum/relation/R = T
 		. += "<b>[initial(R.name)]</b>\t"
 		if(initial(R.name) in pref.relations)
-			. += "<span class='linkOn'>On</span>"
-			. += "<a href='?src=\ref[src];relation=[initial(R.name)]'>Off</a>"
+			. += "<span class='linkOn'>Вкл</span>"
+			. += "<a href='?src=\ref[src];relation=[initial(R.name)]'>Откл</a>"
 		else
-			. += "<a href='?src=\ref[src];relation=[initial(R.name)]'>On</a>"
-			. += "<span class='linkOn'>Off</span>"
+			. += "<a href='?src=\ref[src];relation=[initial(R.name)]'>Вкл</a>"
+			. += "<span class='linkOn'>Откл</span>"
 		. += "<br><i>[initial(R.desc)]</i>"
-		. += "<br><b>What do they know about you?</b><a href='?src=\ref[src];relation_info=[initial(R.name)]'>Edit</a>"
+		. += "<br><b>Что они знают о вас?</b><a href='?src=\ref[src];relation_info=[initial(R.name)]'>Edit</a>"
 		. += "<br><i>[pref.relations_info[initial(R.name)] ? pref.relations_info[initial(R.name)] : "Nothing specific."]</i>"
 		. += "<hr>"
 	. = jointext(.,null)
@@ -49,7 +49,7 @@
 		return TOPIC_REFRESH
 	if(href_list["relation_info"])
 		var/R = href_list["relation_info"]
-		var/info = sanitize(input("Character info", "What would you like the other party for this connection to know about your character?",pref.relations_info[R]) as message|null)
+		var/info = sanitize(input("Информация о персонаже", "Что о вас должны знать?",pref.relations_info[R]) as message|null)
 		if(info)
 			pref.relations_info[R] = info
 		return TOPIC_REFRESH

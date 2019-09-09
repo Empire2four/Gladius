@@ -4,16 +4,16 @@
 	var/is_locked = FALSE
 
 /decl/prefix/language
-	name = "Language"
+	name = "Язык"
 	default_key = ","
 
 /decl/prefix/radio_channel_selection
-	name = "Radio, channel selection"
+	name = "Радио, выбор канала"
 	default_key = ":"
 	is_locked = TRUE
 
 /decl/prefix/radio_main_channel
-	name = "Radio, main channel"
+	name = "Радио, главный канал"
 	default_key = ";"
 
 /decl/prefix/audible_emote

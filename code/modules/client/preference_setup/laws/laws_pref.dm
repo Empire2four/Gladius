@@ -38,24 +38,24 @@
 	var/datum/species/species = all_species[pref.species]
 
 	if(!(species && species.has_organ[BP_POSIBRAIN]))
-		. += "<b>Your Species Has No Laws</b><br>"
+		. += "<b>¬аша раса не имеет законов</b><br>"
 	else
 		. += "<b>Shackle: </b>"
 		if(!pref.is_shackled)
 			. += "<span class='linkOn'>Off</span>"
 			. += "<a href='?src=\ref[src];toggle_shackle=[pref.is_shackled]'>On</a>"
-			. += "<br>Only shackled positronics have laws in an integrated positronic chassis."
+			. += "<br>“олько у скованной позитроники есть законы в интегрированном шасси позитроника."
 			. += "<hr>"
 		else
 			. += "<a href='?src=\ref[src];toggle_shackle=[pref.is_shackled]'>Off</a>"
 			. += "<span class='linkOn'>On</span>"
-			. += "<br>You are shackled and have laws that restrict your behaviour."
+			. += "<br>¬ы скованы и у вас есть законы, которые ограничивают ваше поведение."
 			. += "<hr>"
 
-			. += "<b>Your Current Laws:</b><br>"
+			. += "<b>¬аши текущие законы:</b><br>"
 
 			if(!pref.laws.len)
-				. += "<b>You currently have no laws.</b><br>"
+				. += "<b>” вас сейчас нет законов.</b><br>"
 			else
 				for(var/i in 1 to pref.laws.len)
 					. += "[i]) [pref.laws[i]]<br>"
@@ -81,7 +81,7 @@
 				valid_lawsets[ai_law_name] = law_set_type
 
 		// Post selection
-		var/chosen_lawset = input(user, "Choose a law set:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.laws)  as null|anything in valid_lawsets
+		var/chosen_lawset = input(user, "¬ыберите набор законов:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.laws)  as null|anything in valid_lawsets
 		if(chosen_lawset)
 			var/path = valid_lawsets[chosen_lawset]
 			var/datum/ai_laws/lawset = new path()

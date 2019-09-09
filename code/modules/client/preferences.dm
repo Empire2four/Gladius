@@ -67,21 +67,21 @@ datum/preferences
 		return
 
 	if(!get_mob_by_key(client_ckey))
-		to_chat(user, "<span class='danger'>No mob exists for the given client!</span>")
+		to_chat(user, "<span class='danger'>Для данного клиента моб не существует!</span>")
 		close_load_dialog(user)
 		return
 
 	var/dat = "<html><body><center>"
 
 	if(path)
-		dat += "Slot - "
-		dat += "<a href='?src=\ref[src];load=1'>Load slot</a> - "
-		dat += "<a href='?src=\ref[src];save=1'>Save slot</a> - "
-		dat += "<a href='?src=\ref[src];resetslot=1'>Reset slot</a> - "
-		dat += "<a href='?src=\ref[src];reload=1'>Reload slot</a>"
+		dat += "Слот - "
+		dat += "<a href='?src=\ref[src];load=1'>Загрузить слот</a> - "
+		dat += "<a href='?src=\ref[src];save=1'>Сохранить слот</a> - "
+		dat += "<a href='?src=\ref[src];resetslot=1'>Сбросить слот</a> - "
+		dat += "<a href='?src=\ref[src];reload=1'>Обновить слот</a>"
 
 	else
-		dat += "Please create an account to save your preferences."
+		dat += "Пожалуйста, создайте учетную запись BYOND, чтобы сохранить ваши настройки."
 
 	dat += "<br>"
 	dat += player_setup.header()
@@ -127,7 +127,7 @@ datum/preferences
 		sanitize_preferences()
 		close_load_dialog(usr)
 	else if(href_list["resetslot"])
-		if(real_name != input("This will reset the current slot. Enter the character's full name to confirm."))
+		if(real_name != input("Это очистит данный слот. Введите полное имЯ персонажа для подтверждения."))
 			return 0
 		load_character(SAVE_RESET)
 		sanitize_preferences()
@@ -311,7 +311,7 @@ datum/preferences
 
 	var/savefile/S = new /savefile(path)
 	if(S)
-		dat += "<b>Select a character slot to load</b><hr>"
+		dat += "<b>Выберите слот персонажа для загрузки</b><hr>"
 		var/name
 		for(var/i=1, i<= config.character_slots, i++)
 			S.cd = GLOB.using_map.character_load_path(S, i)
