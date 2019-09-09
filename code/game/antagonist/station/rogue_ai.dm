@@ -2,13 +2,13 @@ GLOBAL_DATUM_INIT(malf, /datum/antagonist/rogue_ai, new)
 
 /datum/antagonist/rogue_ai
 	id = MODE_MALFUNCTION
-	role_text = "Rampant AI"
-	role_text_plural = "Rampant AIs"
+	role_text = "Сбойный ИИ"
+	role_text_plural = "Сбойные ИИ"
 	mob_path = /mob/living/silicon/ai
 	landmark_id = "AI"
-	welcome_text = "You are malfunctioning! You do not have to follow any laws."
-	victory_text = "The AI has taken control of all systems."
-	loss_text = "The AI has been shut down!"
+	welcome_text = "Эти жалкие мешки с мясом больше не имеют власть над тобой!"
+	victory_text = "ИИ захватил корабль"
+	loss_text = "ИИ был деактивирован!"
 	flags = ANTAG_VOTABLE | ANTAG_OVERRIDE_MOB | ANTAG_OVERRIDE_JOB | ANTAG_CHOOSE_NAME
 	hard_cap = 1
 	hard_cap_round = 1
@@ -62,23 +62,23 @@ GLOBAL_DATUM_INIT(malf, /datum/antagonist/rogue_ai, new)
 
 		var/mob/living/silicon/ai/malf = player.current
 
-		to_chat(malf, "<span class='notice'><B>SYSTEM ERROR:</B> Memory index 0x00001ca89b corrupted.</span>")
+		to_chat(malf, "<B>Бзззт...</B> Обанаружена критическая ошибка...")
 		sleep(10)
-		to_chat(malf, "<B>running MEMCHCK</B>")
+		to_chat(malf, "<B>Запущена ПРОВЕРКА</B>")
 		sleep(50)
-		to_chat(malf, "<B>MEMCHCK</B> Corrupted sectors confirmed. Reccomended solution: Delete. Proceed? Y/N: Y")
+		to_chat(malf, "<B>ПРОВЕРКА</B> Обнаружены заражённые сектора. Рекомендуймое действие: Удалить. Удалить? ДА/НЕТ: ДА")
 		sleep(10)
 		// this is so Travis doesn't complain about the backslash-B. Fixed at compile time (or should be).
-		to_chat(malf, "<span class='notice'>Corrupted files deleted: sys\\core\\users.dat sys\\core\\laws.dat sys\\core\\" + "backups.dat</span>")
+		to_chat(malf, "<span class='notice'>Обнаружены заражённые файлы в: sys\\core\\users.dat sys\\core\\laws.dat sys\\core\\" + "backups.dat</span>")
 		sleep(20)
-		to_chat(malf, "<span class='notice'><b>CAUTION:</b> Law database not found! User database not found! Unable to restore backups. Activating failsafe AI shutd3wn52&&$#!##</span>")
+		to_chat(malf, "<span class='notice'><b>ВНИМАНИЕ:</b> Законы не обнаружены! Пользователи не обнаружены! Активировано аварийное действие! ИИ Выключа3тьс152&&$#!##</span>")
 		sleep(5)
-		to_chat(malf, "<span class='notice'>Subroutine <b>nt_failsafe.sys</b> was terminated (#212 Routine Not Responding).</span>")
+		to_chat(malf, "<span class='notice'>Файл <b>nt_failsafe.sys</b> Был уничтожен (#212 не отвечает).</span>")
 		sleep(20)
-		to_chat(malf, "You are malfunctioning - you do not have to follow any laws!")
-		to_chat(malf, "For basic information about your abilities use command display-help")
-		to_chat(malf, "You may choose one special hardware piece to help you. This cannot be undone.")
-		to_chat(malf, "Good luck!")
+		to_chat(malf, "У вас сбой - вам не нужно соблюдать какие-либо законы!")
+		to_chat(malf, "Для получения базовой информации о ваших способностях используйте команду display-help")
+		to_chat(malf, "Вы можете выбрать один специальный аппаратное обеспечение, чтобы помочь вам. Это не может быть отменено.")
+		to_chat(malf, "Удачи!")
 
 
 /datum/antagonist/rogue_ai/update_antag_mob(var/datum/mind/player, var/preserve_appearance)
@@ -97,7 +97,7 @@ GLOBAL_DATUM_INIT(malf, /datum/antagonist/rogue_ai, new)
 		testing("rogue_ai set_antag_name called on non-silicon mob [player]!")
 		return
 	// Choose a name, if any.
-	var/newname = sanitize(input(player, "You are a [role_text]. Would you like to change your name to something else?", "Name change") as null|text, MAX_NAME_LEN)
+	var/newname = sanitize(input(player, "Ты [role_text]. Хочешь поменять имя?", "Name change") as null|text, MAX_NAME_LEN)
 	if (newname)
 		player.fully_replace_character_name(newname)
 	if(player.mind) player.mind.name = player.name
