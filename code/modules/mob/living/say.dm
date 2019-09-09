@@ -37,20 +37,59 @@ var/list/department_radio_keys = list(
 	  ":Z" = "Entertainment",".Z" = "Entertainment",
 	  ":Y" = "Exploration",		".Y" = "Exploration",
 
+	  	  //localized radio keys by ~KareTa
+	  ":к" = "right ear",	".к" = "right ear",
+	  ":д" = "left ear",	".д" = "left ear",
+	  ":ш" = "intercom",	".ш" = "intercom",
+	  ":р" = "department",	".р" = "department",
+	  ":с" = "Command",		".с" = "Command",
+	  ":т" = "Science",		".т" = "Science",
+	  ":ь" = "Medical",		".ь" = "Medical",
+	  ":у" = "Engineering",	".у" = "Engineering",
+	  ":ы" = "Security",	".ы" = "Security",
+	  ":ц" = "whisper",		".ц" = "whisper",
+	  ":е" = "Mercenary",	".е" = "Mercenary",
+	  ":г" = "Supply",		".г" = "Supply",
+	  ":м" = "Service",		".м" = "Service",
+	  ":з" = "AI Private",	".з" = "AI Private",
+	  ":я" = "Entertainment",".я" = "Entertainment",
+	  ":н" = "Exploration",		".н" = "Exploration",
+	  ":л" = "Recon",		".л" = "Recon",	//Skrell Recon ship
+
+	  ":К" = "right ear",	".К" = "right ear",
+	  ":Д" = "left ear",	".Д" = "left ear",
+	  ":Ш" = "intercom",	".Ш" = "intercom",
+	  ":Р" = "department",	".Р" = "department",
+	  ":С" = "Command",		".С" = "Command",
+	  ":Т" = "Science",		".Т" = "Science",
+	  ":Ь" = "Medical",		".Ь" = "Medical",
+	  ":У" = "Engineering",	".У" = "Engineering",
+	  ":Ы" = "Security",	".Ы" = "Security",
+	  ":Ц" = "whisper",		".Ц" = "whisper",
+	  ":Е" = "Mercenary",	".Е" = "Mercenary",
+	  ":Г" = "Supply",		".Г" = "Supply",
+	  ":М" = "Service",		".М" = "Service",
+	  ":З" = "AI Private",	".З" = "AI Private",
+	  ":Я" = "Entertainment",".Я" = "Entertainment",
+	  ":Н" = "Exploration",		".Н" = "Exploration",
+	  ":Л" = "Recon",		".Л" = "Recon",	//Skrell Recon ship
+
+	  /*
 	  //kinda localization -- rastaf0
 	  //same keys as above, but on russian keyboard layout. This file uses cp1251 as encoding.
-	  ":ГЄ" = "right ear",	".ГЄ" = "right ear",
-	  ":Г¤" = "left ear",	".Г¤" = "left ear",
-	  ":Гё" = "intercom",	".Гё" = "intercom",
-	  ":Г°" = "department",	".Г°" = "department",
-	  ":Г±" = "Command",		".Г±" = "Command",
-	  ":ГІ" = "Science",		".ГІ" = "Science",
-	  ":Гј" = "Medical",		".Гј" = "Medical",
-	  ":Гі" = "Engineering",	".Гі" = "Engineering",
-	  ":Г»" = "Security",	".Г»" = "Security",
-	  ":Г¶" = "whisper",		".Г¶" = "whisper",
-	  ":ГҐ" = "Mercenary",	".ГҐ" = "Mercenary",
-	  ":Г©" = "Supply",		".Г©" = "Supply",
+	  ":Р“Р„" = "right ear",	".Р“Р„" = "right ear",
+	  ":Р“В¤" = "left ear",	".Р“В¤" = "left ear",
+	  ":Р“С‘" = "intercom",	".Р“С‘" = "intercom",
+	  ":Р“В°" = "department",	".Р“В°" = "department",
+	  ":Р“В±" = "Command",		".Р“В±" = "Command",
+	  ":Р“Р†" = "Science",		".Р“Р†" = "Science",
+	  ":Р“С" = "Medical",		".Р“С" = "Medical",
+	  ":Р“С–" = "Engineering",	".Р“С–" = "Engineering",
+	  ":Р“В»" = "Security",	".Р“В»" = "Security",
+	  ":Р“В¶" = "whisper",		".Р“В¶" = "whisper",
+	  ":Р“Тђ" = "Mercenary",	".Р“Тђ" = "Mercenary",
+	  ":Р“В©" = "Supply",		".Р“В©" = "Supply",
+	  */
 )
 
 
@@ -145,13 +184,16 @@ proc/get_radio_key_from_channel(var/channel)
 	if(!message)
 		return
 
+	message = replacetext(message, "&#255;", "__:Я:_") // Никому же в голову не придет такое написать? ~bear1ake@inf-dev
 	message = html_decode(message)
 
 	var/end_char = copytext(message, lentext(message), lentext(message) + 1)
 	if(!(end_char in list(".", "?", "!", "-", "~")))
 		message += "."
 
-	return html_encode(message)
+	message = html_encode(message)
+	message = replacetext(message, "__:Я:_", "&#255;")
+	return message
 
 /mob/living/say(var/message, var/datum/language/speaking = null, var/verb="says", var/alt_name="", whispering)
 	if(client)

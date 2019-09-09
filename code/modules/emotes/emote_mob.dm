@@ -113,7 +113,9 @@
 	subtext = html_encode(subtext)
 	// Store the player's name in a nice bold, naturalement
 	nametext = "<B>[emoter]</B>"
-	return pretext + nametext + subtext
+	var/overall = pretext + nametext + subtext
+	overall = replacetext(overall, "__:ß:_", "&#255;")
+	return overall
 
 /mob/proc/custom_emote(var/m_type = VISIBLE_MESSAGE, var/message = null)
 
